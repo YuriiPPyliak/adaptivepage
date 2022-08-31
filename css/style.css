@@ -1,0 +1,612 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+
+.main_container {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto 160px;
+    max-width: 1470px;
+}
+
+.slider_wrapper {
+    margin: 0 auto;
+    max-width: 1312px;
+}
+
+.content_wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+/* .logo_block {
+    position: relative;
+    text-align: center;
+    background: pink;
+} */
+
+/* .logo {
+    margin: 80px 0 80px 0;
+} */
+
+.header {
+    padding: 48px 30px;
+    position: relative;
+}
+
+.logo {
+    width: 68px;
+    height: 59px;
+    display: block;
+    margin: 0 auto 80px;
+    position: relative;
+    z-index: 999;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    color: #005BBB;
+}
+
+
+/*_______Burger Menu________*/
+
+.btn-burger {
+    display: none;
+    position: absolute;
+    top: 48px;
+    right: 30px;
+    border: 0;
+    background: none;
+}
+
+.dropdown {
+    display: none;
+}
+
+.btn-close {
+    position: absolute;
+    top: 48px;
+    right: 30px;
+    border: 0;
+    background: none;
+}
+
+/*_______SLick slide_______*/
+
+/*цей варіант досить складний, та при адаптації
+:after постійно втікає(маю біду із заданням вдастивостей розташування)*/
+/*.img-item {
+  border-left: 10px solid #FFD500; 
+  width: 100%;
+  position: relative; 
+}
+
+.list:after {
+  content:"";
+  display: block;
+  width: 10px;
+  height: 50%;
+  background-color: #005BBB;
+  position: sticky;
+  bottom: 100%;
+  top: 100%
+  transform: translateX(-100%)
+}*/
+
+.img-item {
+    border-left: 10px solid;
+    border-image: linear-gradient(to bottom, rgba(0, 91, 187, 1) 0% 50%, rgba(255, 213, 0, 1) 50% 100%) 1;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 40px;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #005BBB;
+    background: #fff;
+}
+
+li.slick-active button {
+    background-color: #005BBB;
+}
+
+/*.slick-dots button:hover {
+background: #005BBB;
+}*/
+
+.subtitle {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 140%;
+    text-align: left;
+    margin: 80px 0;
+    color: #005BBB;
+}
+
+.box_line {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+    color: #005BBB;
+}
+
+.box_line:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #005BBB;
+    position: absolute;
+    top: -16px
+}
+
+.box_line:after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #005BBB;
+    position: absolute;
+    bottom: -16px;
+    right: 25%
+        /*Чому я написав 25%??? Бо загальна шиирина 50?*/
+}
+
+.box {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.box-content {
+    display: flex;
+    flex-basis: 50%;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    background-color: #005BBB;
+    border-left: 10px solid #FFD500;
+    color: #fff;
+    line-height: 23px;
+    padding: 40px 40px 40px 30px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.number {
+    font-weight: 400;
+    font-size: 48px;
+}
+
+/* ____INPUT____ */
+
+/*.border {
+  border: 1.5px solid #005BBB;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  margin-bottom: 40px;
+}*/
+
+/*.message {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #005BBB;
+  opacity: 0.5;
+}*/
+
+.contact_us_wrapper {
+    position: relative;
+}
+
+::placeholder {
+    color: #005BBB;
+    opacity: 0.5;
+}
+
+.contact_us {
+    height: 120px;
+    width: 100%;
+    border: 1.5px solid #005BBB;
+    padding: 49px 249px 49px 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.btn_contact_us {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.06em;
+    background-color: #005BBB;
+    border: none;
+    padding: 13px 56px;
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*Styles for mobile */
+@media only screen and (min-width: 0) and (max-width: 1023px) {
+    .section_wrapper {
+        margin: -50px 20px;
+    }
+
+    .box {
+        flex-direction: column;
+    }
+
+    .header {
+        padding-top: 0;
+    }
+
+    .box_line:after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        right: 0;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    .title {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.06em;
+    }
+
+    .contact_us_wrapper {
+        position: relative;
+        min-width: 335px;
+    }
+
+    .contact_us {
+        padding-top: 20px;
+        padding-bottom: 100px;
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .btn_contact_us {
+        position: relative;
+        right: 0;
+        top: 10%;
+        width: 100%;
+        transform: translateY(50%);
+        margin-bottom: 280px;
+    }
+
+    /* Bugrer menu */
+
+
+    .btn-burger,
+    .btn-close {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        background: none;
+        z-index: 1;
+    }
+
+    .btn-burger svg * {
+        fill: #fff;
+    }
+
+    .gallery {
+        margin: 0 -20px 80px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .menu-open .logo {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 65px;
+    }
+
+    .header-navigation {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #005BBB;
+        padding: 120px 60px 150px;
+        color: #fff;
+        z-index: 1;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-open .header-navigation,
+    .menu-open .header-navigation .dropdown {
+        display: block;
+    }
+
+    .menu-open .logo svg * {
+        fill: #fff;
+    }
+
+    .menu-open .links a {
+        color: #fff;
+    }
+}
+
+/*Styles for tablet */
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    .slider_wrapper {
+        max-width: 1312px;
+    }
+
+    .section_wrapper {
+        margin: 0 60px;
+    }
+
+    .box {
+        flex-direction: column;
+    }
+
+    /* .header {
+        margin: 48px 0 80px;
+        align-items: center;
+    } */
+
+    .logo {
+        margin: 0;
+    }
+
+    .subtitle {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    .title {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    .slick-list {
+        margin: 0 60px;
+    }
+
+    /* Burger menu */
+    .btn-burger {
+        display: block;
+        background: none;
+    }
+
+    .header-navigation {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #005BBB;
+        padding: 120px 60px 150px;
+        color: #fff;
+        z-index: 1;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-open .header-navigation,
+    .menu-open .header-navigation .dropdown {
+        display: block;
+    }
+
+    .menu-open .logo svg * {
+        fill: #fff;
+    }
+
+    .menu-open .links a {
+        color: #fff;
+    }
+}
+
+/*Styles for mobile and tablet */
+@media only screen and (min-width: 0) and (max-width: 1199px) {
+
+    /* .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } */
+
+    /*Спроба № Збився з рахунку. Burger menu*/
+
+
+
+}
